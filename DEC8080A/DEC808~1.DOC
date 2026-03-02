@@ -1,0 +1,213 @@
+
+*******************************************************************************
+                                   I8080GLUE
+*******************************************************************************
+
+CUPLPLD         4.2a Serial# MD-25710022
+Device          g22v10  Library DLIB-h-82-1
+Created         Sat Dec 27 21:06:32 2025
+Name            I8080GLUE
+Partno          KF010001
+Revision        02
+Date            25/11/02
+Designer        efialtes_htn
+Company         EFIALTES_HTN Design
+Assembly        System 19-10-i8080A
+Location        U06
+
+===============================================================================
+                            Expanded Product Terms
+===============================================================================
+
+CLKA.ar  =>
+    0 
+
+CLKA.d  =>
+    !CLKA & !CLKB
+  # !CLKA & !CLKC
+  # !CLKA & !CLKD
+
+CLKA.sp  =>
+    0 
+
+CLKB.ar  =>
+    0 
+
+CLKB.d  =>
+    !CLKA & CLKB & !CLKC
+  # !CLKA & CLKB & !CLKD
+  # CLKA & !CLKB
+
+CLKB.sp  =>
+    0 
+
+CLKC.ar  =>
+    0 
+
+CLKC.d  =>
+    !CLKA & CLKC & !CLKD
+  # !CLKB & CLKC
+  # CLKA & CLKB & !CLKC
+
+CLKC.sp  =>
+    0 
+
+CLKD.ar  =>
+    0 
+
+CLKD.d  =>
+    !CLKB & CLKD
+  # !CLKC & CLKD
+  # CLKA & CLKB & CLKC & !CLKD
+
+CLKD.sp  =>
+    0 
+
+CLKE.ar  =>
+    0 
+
+CLKE.d  =>
+    !CLKB & CLKE
+  # !CLKC & CLKE
+  # !CLKD & CLKE
+  # CLKB & CLKC & CLKD & !CLKE
+
+CLKE.sp  =>
+    0 
+
+CLKF.ar  =>
+    0 
+
+CLKF.d  =>
+    !CLKB & CLKF
+  # !CLKC & CLKF
+  # !CLKD & CLKF
+  # !CLKE & CLKF
+  # CLKB & CLKC & CLKD & CLKE & !CLKF
+
+CLKF.sp  =>
+    0 
+
+CLKG.ar  =>
+    0 
+
+CLKG.d  =>
+    !CLKB & CLKG
+  # !CLKC & CLKG
+  # !CLKD & CLKG
+  # !CLKE & CLKG
+  # !CLKF & CLKG
+  # CLKB & CLKC & CLKD & CLKE & CLKF & !CLKG
+
+CLKG.sp  =>
+    0 
+
+RAMEN =>
+    A15 & NRD
+  # A15 & NWR
+
+RAMEN.oe  =>
+    1 
+
+ROMEN =>
+    !A14 & !A15 & NRD
+
+ROMEN.oe  =>
+    1 
+
+SEREN =>
+    !A2 & !A3 & !A4 & !A5 & !A6 & !A7 & !SPR
+
+SEREN.oe  =>
+    1 
+
+CLKA.oe  =>
+    1 
+
+CLKB.oe  =>
+    1 
+
+CLKC.oe  =>
+    1 
+
+CLKD.oe  =>
+    1 
+
+CLKE.oe  =>
+    1 
+
+CLKF.oe  =>
+    1 
+
+CLKG.oe  =>
+    1 
+
+
+===============================================================================
+                                 Symbol Table
+===============================================================================
+
+Pin Variable                                    Pterms   Max     Min    
+Pol   Name              Ext     Pin     Type     Used   Pterms  Level   
+--- --------            ---     ---     ----    ------  ------  -----   
+
+    A2                          11       V        -       -       -     
+    A3                          10       V        -       -       -     
+    A4                          9        V        -       -       -     
+    A5                          8        V        -       -       -     
+    A6                          7        V        -       -       -     
+    A7                          6        V        -       -       -     
+    A14                         5        V        -       -       -     
+    A15                         4        V        -       -       -     
+    CLKA                        23       V        -       -       -     
+    CLKA                ar      23       X        1       1       1     
+    CLKA                d       23       X        3       8       1     
+    CLKA                sp      23       X        1       1       1     
+    CLKB                        22       V        -       -       -     
+    CLKB                ar      22       X        1       1       1     
+    CLKB                d       22       X        3       10      1     
+    CLKB                sp      22       X        1       1       1     
+    CLKC                        21       V        -       -       -     
+    CLKC                ar      21       X        1       1       1     
+    CLKC                d       21       X        3       12      1     
+    CLKC                sp      21       X        1       1       1     
+    CLKD                        20       V        -       -       -     
+    CLKD                ar      20       X        1       1       1     
+    CLKD                d       20       X        3       14      1     
+    CLKD                sp      20       X        1       1       1     
+    CLKE                        19       V        -       -       -     
+    CLKE                ar      19       X        1       1       1     
+    CLKE                d       19       X        4       16      1     
+    CLKE                sp      19       X        1       1       1     
+    CLKF                        18       V        -       -       -     
+    CLKF                ar      18       X        1       1       1     
+    CLKF                d       18       X        5       16      1     
+    CLKF                sp      18       X        1       1       1     
+    CLKG                        17       V        -       -       -     
+    CLKG                ar      17       X        1       1       1     
+    CLKG                d       17       X        6       14      1     
+    CLKG                sp      17       X        1       1       1     
+ !  NRD                         2        V        -       -       -     
+ !  NWR                         3        V        -       -       -     
+    OSC                         1        V        -       -       -     
+ !  RAMEN                       16       V        2       12      1     
+    RAMEN               oe      16       X        1       1       1     
+ !  ROMEN                       15       V        1       10      1     
+    ROMEN               oe      15       X        1       1       1     
+ !  SEREN                       14       V        1       8       1     
+    SEREN               oe      14       X        1       1       1     
+    SPR                         13       V        -       -       -     
+    CLKA                oe      23       D        1       1       0     
+    CLKB                oe      22       D        1       1       0     
+    CLKC                oe      21       D        1       1       0     
+    CLKD                oe      20       D        1       1       0     
+    CLKE                oe      19       D        1       1       0     
+    CLKF                oe      18       D        1       1       0     
+    CLKG                oe      17       D        1       1       0     
+
+
+LEGEND    D : default variable         F : field      G : group
+          I : intermediate variable    N : node       M : extended node
+          U : undefined                V : variable   X : extended variable
+          T : function
+
